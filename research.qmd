@@ -1,0 +1,12 @@
+---
+title: "Research"
+---
+Last semester I wanted to combine what I'd learned with the power of the technoledgy from my DJI Mini 3 Pro. Although my drone has no imaging capabilities (other than stunning 4K video at 30 frames a second...) in combination with owning an Apple phone, meant I had to do everything myself manually. I had to designate my own flight path, tie points, and determine how many photos were enough to get an accurate 3D model to assess exterior damage... which I called an external audit.
+```{r}
+#| echo: false
+knitr::include_graphics("3DModel.png")
+knitr::include_graphics("3DModel2.png")
+```
+I later discovered on my trip that archaeologists had used drones with imaging capabilities to assess damage over time done to Macchu Picchu. So I'm making an effort to go in the Remote Sensing direction with respect to the Vilcanota mountains. Although my final decision hasn't been finalized, with the help of my 3D Data Capture / LiDAR class, I hope to be able to narrow my scope soon.  
+More to be added as it develops...  
+**https://www.mdpi.com/2072-4292/16/20/3901**

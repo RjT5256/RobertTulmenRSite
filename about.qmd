@@ -1,0 +1,14 @@
+---
+title: "Robert Tulmen"
+---
+
+**GIS Masters Student (3rd Semester)  
+Local Drone Enthusiast  
+Explorer/Traveler**
+\vspace{1em}
+```{r}
+#| echo: false
+knitr::include_graphics("Me.png")
+```
+## Welcome to my page!  
+I'm currently working part-time for UTD as a student worker for the OIT department, I use my data analytics skills gained from my studies to produce visualizations for our social media sites to drive funding decisions and I also do part-time property management for a building in Highland Park - alongside my masters education here at UTD of course. I love technology, watching movies, and I live with two cats named Archimedes and Scout. 

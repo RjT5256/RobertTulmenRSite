@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Robert Tulmen",
+    "section": "",
+    "text": "GIS Masters Student (3rd Semester)\nLocal Drone Enthusiast\nExplorer/Traveler"
+  },
+  {
+    "objectID": "about.html#welcome-to-my-page",
+    "href": "about.html#welcome-to-my-page",
+    "title": "Robert Tulmen",
+    "section": "Welcome to my page!",
+    "text": "Welcome to my page!\nI’m currently working part-time for UTD as a student worker for the OIT department, I use my data analytics skills gained from my studies to produce visualizations for our social media sites to drive funding decisions and I also do part-time property management for a building in Highland Park - alongside my masters education here at UTD of course. I love technology, watching movies, and I live with two cats named Archimedes and Scout."
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Last semester I wanted to combine what I’d learned with the power of the technoledgy from my DJI Mini 3 Pro. Although my drone has no imaging capabilities (other than stunning 4K video at 30 frames a second…) in combination with owning an Apple phone, meant I had to do everything myself manually. I had to designate my own flight path, tie points, and determine how many photos were enough to get an accurate 3D model to assess exterior damage… which I called an external audit.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI later discovered on my trip that archaeologists had used drones with imaging capabilities to assess damage over time done to Macchu Picchu. So I’m making an effort to go in the Remote Sensing direction with respect to the Vilcanota mountains. Although my final decision hasn’t been finalized, with the help of my 3D Data Capture / LiDAR class, I hope to be able to narrow my scope soon.\nMore to be added as it develops…\nhttps://www.mdpi.com/2072-4292/16/20/3901"
+  },
+  {
+    "objectID": "assignment1.html",
+    "href": "assignment1.html",
+    "title": "Assignment1",
+    "section": "",
+    "text": "This is a page reserved for assignment one."
+  },
+  {
+    "objectID": "assignment2.html",
+    "href": "assignment2.html",
+    "title": "Assignment2",
+    "section": "",
+    "text": "What we’re missing - Enterprise data. The thing that will separate all of us using the same model will be the quality and quantity of data we can obtain. The key to enterprise data is decision making; it allows you to affect your future or have some forecast of what is going to happen. We “need to be able to make predictions,” according to Jure Leskovec. The AI revolution has taken us by force because of RCNNs. The way we process knowledge has completely diverged from the old ways, but decision making is still archaic. ML and predictive AI have yet to be “touched,” and we can still make large advances towards that goal of highly accurate predictive modeling. Any kind of predictive tasks in tandem with loss functions can be tuned to any situation because of the non-factor of needing pre-training. Risk assessment, customer service, healthcare, finance—anything that gets better with predictive analysis—can be heavily influenced by graph-transformed models. There are still some nuances to the science, but the end goal, or “what is promised,” is no pre-training requirement and an accurate prediction in under a second. Right now, pre-trained models can be as accurate as senior data scientists, but if you want to push it further you can fine-tune the model by using data specific to your task and it becomes superhuman accurate. This is especially great for fraud protection. Real-world examples would be user ad matching, ad relevance. Reddit, in a matter of a couple of months, built a “three-year” model by virtue of having so much data and a growing community to all pitch into it. The role of a data scientist won’t go away but will shift to modeling the data and determining the business impact. It will, however, be much faster and far more accurate, creating a new environment for several different disciplines."
+  },
+  {
+    "objectID": "purpose.html",
+    "href": "purpose.html",
+    "title": "Purpose",
+    "section": "",
+    "text": "If you’re like me, you were born in the United States, but don’t quite feel like you’re at home.\nEvery chance I get I make an attempt to travel to places I’ve never seen before. Whether its backpacking through Europe with a buddy of mine, visiting my parents in Portugal, or going North to Canada to stop by for Christmas with my Oma, I’m always looking for a new adventure. Recently, after completing my second semester at UTD I had the idea to visit my study area for one of my final projects for my advanced GIS class. I booked a flight and found myself roaming the streets of Cusco Peru and had started my two week solo adventure in South America. My goal was to experience a different culture as well as try and grab relevant data with my DJI Mini 3 Pro for potential thesis data (Peru have very strict drone laws…), but ultimately I was there to feel small again. After visiting many different cities and historical sites I finally found myself at the biggest attraction, Macchu Picchu. At only 24 I had reached one of the World’s wonders and had the chance to explore this ancient relic of time, and also came to the conclusion that there’s so much more to see in this World than just Texas. I want to use the knowledge I’m accumulating from this masters and put it into practice all over the world…"
+  }
+]

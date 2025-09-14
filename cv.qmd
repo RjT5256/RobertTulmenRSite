@@ -1,0 +1,6 @@
+---
+format: pdf
+header-includes:
+  - \usepackage{pdfpages}
+---
+\includepdf[]{Main_8-13-2025.pdf}
