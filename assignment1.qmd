@@ -1,5 +1,5 @@
 ---
-title: "Assignment1"
+title: "Assignment 1"
 ---
 
 This is a page reserved for assignment one.

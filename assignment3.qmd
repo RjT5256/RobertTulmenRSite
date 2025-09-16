@@ -1,0 +1,27 @@
+---
+title: "Assignment 3"
+---
+
+## Working With Google Trends to Identify Differences in Trends for the 2024 Presidential Elections - gtrendsR
+
+```{r}
+#| echo: false
+#| warning: false
+library(knitr)
+library(gtrendsR)
+library(tidyverse)
+
+mydata<- read.csv("multiTimeline.csv")
+plot(mydata$Donald.Trump)
+plot(mydata$Kamala.Harris)
+plot(mydata$Election)
+
+webData <- gtrends(
+  keyword = c("Kamala Harris", "Donald Trump", "Elections"),
+  time = "now 7-d",
+  onlyInterest = TRUE
+)
+plot(webData)
+```
+# Results
+Personally speaking, I enjoy plotting interest using "gtrendsR" a lot more than downloading the CSV file and loading in the data. It's a lot more effort to generate graphics, you still get the gratification of make the visualizations yourself, but the gtrendsR package is way more intuitive especially if all you care about is interest over certain dates at certain times.

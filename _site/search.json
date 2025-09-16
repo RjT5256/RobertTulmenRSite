@@ -23,16 +23,16 @@
   {
     "objectID": "assignment1.html",
     "href": "assignment1.html",
-    "title": "Assignment1",
+    "title": "Assignment 1",
     "section": "",
     "text": "This is a page reserved for assignment one."
   },
   {
     "objectID": "assignment2.html",
     "href": "assignment2.html",
-    "title": "Assignment2",
+    "title": "Assignment 2",
     "section": "",
-    "text": "What we’re missing - Enterprise data. The thing that will separate all of us using the same model will be the quality and quantity of data we can obtain. The key to enterprise data is decision making; it allows you to affect your future or have some forecast of what is going to happen. We “need to be able to make predictions,” according to Jure Leskovec. The AI revolution has taken us by force because of RCNNs. The way we process knowledge has completely diverged from the old ways, but decision making is still archaic. ML and predictive AI have yet to be “touched,” and we can still make large advances towards that goal of highly accurate predictive modeling. Any kind of predictive tasks in tandem with loss functions can be tuned to any situation because of the non-factor of needing pre-training. Risk assessment, customer service, healthcare, finance—anything that gets better with predictive analysis—can be heavily influenced by graph-transformed models. There are still some nuances to the science, but the end goal, or “what is promised,” is no pre-training requirement and an accurate prediction in under a second. Right now, pre-trained models can be as accurate as senior data scientists, but if you want to push it further you can fine-tune the model by using data specific to your task and it becomes superhuman accurate. This is especially great for fraud protection. Real-world examples would be user ad matching, ad relevance. Reddit, in a matter of a couple of months, built a “three-year” model by virtue of having so much data and a growing community to all pitch into it. The role of a data scientist won’t go away but will shift to modeling the data and determining the business impact. It will, however, be much faster and far more accurate, creating a new environment for several different disciplines."
+    "text": "What we’re missing—enterprise data. The thing that will separate all of us using the same model will be the quality and quantity of data we can obtain. The key to enterprise data is decision-making; it allows you to affect your future or have some forecast of what is going to happen. We “need to be able to make predictions,” according to Jure Leskovec. The AI revolution has taken us by force because of RCNNs. The way we process knowledge has completely diverged from the old ways, but decision-making is still archaic. ML and predictive AI have yet to be “touched,” and we can still make large advances towards that goal of highly accurate predictive modeling. Any kind of predictive tasks in tandem with loss functions can be tuned to any situation because of the non-factor of needing pre-training. Risk assessment, customer service, healthcare, finance—anything that gets better with predictive analysis—can be heavily influenced by graph-transformed models. There are still some nuances to the science, but the end goal, or “what is promised,” is no pre-training requirement and an accurate prediction in under a second. Right now, pre-trained models can be as accurate as senior data scientists, but if you want to push it further you can fine-tune the model by using data specific to your task and it becomes superhumanly accurate. This is especially great for fraud protection. Real-world examples would be user ad matching and ad relevance. Reddit, in a matter of a couple of months, built a “three-year” model by virtue of having so much data and a growing community to all pitch into it. The role of a data scientist won’t go away but will shift to modeling the data and determining the business impact. It will, however, be much faster and far more accurate, creating a new environment for several different disciplines."
   },
   {
     "objectID": "purpose.html",
@@ -54,5 +54,19 @@
     "title": "Robert Tulmen",
     "section": "Welcome to my page!",
     "text": "Welcome to my page!\nI’m currently working part-time for UTD as a student worker for the OIT department, I use my data analytics skills gained from my studies to produce visualizations for our social media sites to drive funding decisions and I also do part-time property management for a building in Highland Park - alongside my masters education here at UTD of course. I love technology, watching movies, and I live with two cats named Archimedes and Scout."
+  },
+  {
+    "objectID": "assignment3.html",
+    "href": "assignment3.html",
+    "title": "Assignment3",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors"
+  },
+  {
+    "objectID": "assignment3.html#working-with-to-identify-differences-in-trends-for-the-2024-elections---gtrendsr",
+    "href": "assignment3.html#working-with-to-identify-differences-in-trends-for-the-2024-elections---gtrendsr",
+    "title": "Assignment3",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors"
   }
 ]
