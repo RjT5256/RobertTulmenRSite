@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 3 – Robert J. Tulmen</title>
+<title>Tech Study – Robert J. Tulmen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,12 +114,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Assignment 2</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./assignment3.html" aria-current="page"> 
+    <a class="nav-link" href="./assignment3.html"> 
 <span class="menu-text">Assignment 3</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./techstudy.html"> 
-<span class="menu-text">TechStudy</span></a>
+    <a class="nav-link active" href="./techstudy.html" aria-current="page"> 
+<span class="menu-text">Tech Study</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -132,22 +132,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#working-with-google-trends-to-identify-differences-in-trends-for-the-2024-presidential-elections---gtrendsr" id="toc-working-with-google-trends-to-identify-differences-in-trends-for-the-2024-presidential-elections---gtrendsr" class="nav-link active" data-scroll-target="#working-with-google-trends-to-identify-differences-in-trends-for-the-2024-presidential-elections---gtrendsr">Working With Google Trends to Identify Differences in Trends for the 2024 Presidential Elections - gtrendsR</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 3</h1>
+<h1 class="title">Tech Study</h1>
 </div>
 
 
@@ -164,45 +157,57 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="working-with-google-trends-to-identify-differences-in-trends-for-the-2024-presidential-elections---gtrendsr" class="level2">
-<h2 class="anchored" data-anchor-id="working-with-google-trends-to-identify-differences-in-trends-for-the-2024-presidential-elections---gtrendsr">Working With Google Trends to Identify Differences in Trends for the 2024 Presidential Elections - gtrendsR</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="assignment3_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="techstudy_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="assignment3_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="cell-output cell-output-stdout">
+<pre><code>Simple feature collection with 10 features and 3 fields
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: -123.0241 ymin: 33.38779 xmax: -117.4133 ymax: 39.3165
+Geodetic CRS:  NAD83
+# A tibble: 10 × 4
+   NAME               estimate_MedianHHI moe_MedianHHI                  geometry
+   &lt;chr&gt;                           &lt;dbl&gt;         &lt;dbl&gt;        &lt;MULTIPOLYGON [°]&gt;
+ 1 Santa Clara Count…             159674          1962 (((-122.2027 37.36305, -…
+ 2 San Mateo County,…             156000          3019 (((-122.5209 37.59418, -…
+ 3 Marin County, Cal…             142785          4083 (((-122.4451 37.86142, -…
+ 4 San Francisco Cou…             141446          2576 (((-122.3777 37.83046, -…
+ 5 Alameda County, C…             126240          1364 (((-122.3423 37.80556, -…
+ 6 Contra Costa Coun…             125727          1829 (((-122.4298 37.9654, -1…
+ 7 Placer County, Ca…             114678          1891 (((-121.4844 38.75135, -…
+ 8 Orange County, Ca…             113702           986 (((-118.1146 33.74461, -…
+ 9 Alpine County, Ca…             110781         18601 (((-120.0724 38.70277, -…
+10 Santa Cruz County…             109266          2959 (((-122.3177 37.18695, -…</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Simple feature collection with 10 features and 3 fields
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: -124.4096 ymin: 32.61864 xmax: -114.4629 ymax: 42.00948
+Geodetic CRS:  NAD83
+# A tibble: 10 × 4
+   NAME               estimate_MedianHHI moe_MedianHHI                  geometry
+   &lt;chr&gt;                           &lt;dbl&gt;         &lt;dbl&gt;        &lt;MULTIPOLYGON [°]&gt;
+ 1 Trinity County, C…              53498          7852 (((-123.6224 40.9317, -1…
+ 2 Siskiyou County, …              55499          2854 (((-123.7184 41.59797, -…
+ 3 Imperial County, …              56393          2266 (((-116.1063 32.66473, -…
+ 4 Modoc County, Cal…              56648          3735 (((-121.4572 41.94994, -…
+ 5 Lake County, Cali…              58738          2308 (((-123.0942 39.09529, -…
+ 6 Sierra County, Ca…              60000         17579 (((-121.0575 39.53999, -…
+ 7 Humboldt County, …              61135          1997 (((-124.4086 40.4432, -1…
+ 8 Tehama County, Ca…              61834          3283 (((-123.0654 40.28697, -…
+ 9 Lassen County, Ca…              64395          5496 (((-121.3319 40.91336, -…
+10 Mendocino County,…              64688          2951 (((-124.0233 40.00128, -…</code></pre>
 </div>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="assignment3_files/figure-html/unnamed-chunk-1-3.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="assignment3_files/figure-html/unnamed-chunk-1-4.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="results" class="level1">
-<h1>Results</h1>
-<p>Personally speaking, I enjoy plotting interest using “gtrendsR” a lot more than downloading the CSV file and loading in the data. It’s a lot more effort to generate graphics, you still get the gratification of make the visualizations yourself, but the gtrendsR package is way more intuitive especially if all you care about is interest over certain dates at certain times.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
