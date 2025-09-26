@@ -13,11 +13,9 @@ website:
       href: research.html
     - text: "CV"
       href: cv.pdf
-    - text: "Assignment 1"
-      href: assignment1.html
-    - text: "Assignment 2"
+    - text: "Insight on Data and ML"
       href: assignment2.html
-    - text: "Assignment 3"
+    - text: "Election Data Discrepancies"
       href: assignment3.html
     - text: "Tech Study"
       href: techstudy.html
