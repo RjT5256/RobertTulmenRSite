@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Using Google Trends – Robert J. Tulmen</title>
+<title>Web Scraping – Robert J. Tulmen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Insight on Data and ML</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./assignment3.html" aria-current="page"> 
+    <a class="nav-link" href="./assignment3.html"> 
 <span class="menu-text">Election Data Discrepancies</span></a>
   </li>  
   <li class="nav-item">
@@ -118,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Tech Study</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./webscraping.html"> 
+    <a class="nav-link active" href="./webscraping.html" aria-current="page"> 
 <span class="menu-text">Web Scraping</span></a>
   </li>  
 </ul>
@@ -132,22 +132,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#working-with-google-trends-to-identify-differences-in-trends-for-the-2024-presidential-elections---gtrendsr" id="toc-working-with-google-trends-to-identify-differences-in-trends-for-the-2024-presidential-elections---gtrendsr" class="nav-link active" data-scroll-target="#working-with-google-trends-to-identify-differences-in-trends-for-the-2024-presidential-elections---gtrendsr">Working With Google Trends to Identify Differences in Trends for the 2024 Presidential Elections - gtrendsR</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Using Google Trends</h1>
+<h1 class="title">Web Scraping</h1>
 </div>
 
 
@@ -164,45 +157,42 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="working-with-google-trends-to-identify-differences-in-trends-for-the-2024-presidential-elections---gtrendsr" class="level2">
-<h2 class="anchored" data-anchor-id="working-with-google-trends-to-identify-differences-in-trends-for-the-2024-presidential-elections---gtrendsr">Working With Google Trends to Identify Differences in Trends for the 2024 Presidential Elections - gtrendsR</h2>
+<p>Steam charts is a cool place to gather data on which games are the most popular amongst the steam population, which is one of the biggest platforms used by gamers. This code uses the base url of steam charts with minor modifications to go through the first 10 pages using a loop with the XPath from the HTML code.</p>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="assignment3_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 7
+   Rank Name      `Current Players` `Last 30 Days` `Peak Players` `Hours Played`
+  &lt;dbl&gt; &lt;chr&gt;                 &lt;int&gt; &lt;lgl&gt;                   &lt;int&gt;          &lt;int&gt;
+1     1 Counter-…           1274415 NA                    1571060      681345750
+2     2 Dota 2               737481 NA                     953869      427383392
+3     3 PUBG: BA…            578070 NA                     707773      205646798
+4     4 Delta Fo…            216434 NA                     246418       79347051
+5     5 Apex Leg…            148337 NA                     201139       62213902
+6     6 Wallpape…            139489 NA                     141058       57902830
+# ℹ 1 more variable: Page &lt;int&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Total rows scraped: 250"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 250 × 6
+    Rank Name              `Current Players` `Peak Players` `Hours Played`  Page
+   &lt;dbl&gt; &lt;chr&gt;                         &lt;int&gt;          &lt;int&gt;          &lt;int&gt; &lt;int&gt;
+ 1     1 Counter-Strike 2            1274415        1571060      681345750     1
+ 2     2 Dota 2                       737481         953869      427383392     1
+ 3     3 PUBG: BATTLEGROU…            578070         707773      205646798     1
+ 4     4 Delta Force                  216434         246418       79347051     1
+ 5     5 Apex Legends                 148337         201139       62213902     1
+ 6     6 Wallpaper Engine             139489         141058       57902830     1
+ 7     7 Hollow Knight: S…            123651         462134      104464739     1
+ 8     8 Bongo Cat                    116947         136696       71393689     1
+ 9     9 Monster Hunter W…            114034         127322       10842522     1
+10    10 NARAKA: BLADEPOI…            111478         140882       34813042     1
+# ℹ 240 more rows</code></pre>
 </div>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="assignment3_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="assignment3_files/figure-html/unnamed-chunk-1-3.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="assignment3_files/figure-html/unnamed-chunk-1-4.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="results" class="level1">
-<h1>Results</h1>
-<p>Personally speaking, I enjoy plotting interest using “gtrendsR” a lot more than downloading the CSV file and loading in the data. It’s a lot more effort to generate graphics, you still get the gratification of make the visualizations yourself, but the gtrendsR package is way more intuitive especially if all you care about is interest over certain dates at certain times.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
