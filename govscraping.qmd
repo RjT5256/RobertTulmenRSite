@@ -1,0 +1,111 @@
+---
+title: "Scraping Government Data"
+---
+
+Using the script provided with minor adjustments, downloading one to five documents at a time takes a minuscule amount of time. Whether you have pre-made CSV, JSON file makes the process a lot easier and more manageable especially if those files are specific and as detailed as they were for us making running this script fairly simple.
+
+However, running the script that downloads ALL documents from the https://www.govinfo.gov/ is not a feasible way of scraping data especially if those pdf files are going to retain their size with all of the unnecessary information remaining in those documents (unnecessary information being distinguished by the web scraper for whichever goal you're trying to achieve). My start time today running the script was 2:31PM and my end time was 3:01PM. So in 30 minutes I managed to download around one thousand pdf files that I have still to go through and dictate necessary information from unnecessary information. If the goal of this script was to scrape every document on a website that meets a specific criteria then that goal has been achieved and the script has served its purpose. But... If you were trying to gather all information on a specific topic and you didn't have access to these ready made CSV/JSON files, this is not a feasible way of sifting through all the documentation. I would prefer keyword searches using third party applications, or tweaking this script to gather a more manageable data set that is readable unlike the hundreds of pdf files that I now have to manually go through in order for the script to retain some sort of value. 
+
+```{r}
+## Scraping Government data
+## Website: GovInfo (https://www.govinfo.gov/app/search/)
+## Prerequisite: Download from website the list of files to be downloaded
+## Designed for background job
+
+# Start with a clean plate and lean loading to save memory
+ 
+gc(reset=T)
+
+# install.packages(c("purrr", "magrittr")
+library(purrr)
+library(magrittr) # Alternatively, load tidyverse
+
+## Set path for reading the listing and home directory
+## For Windows, use "c:\\directory\\subdirectory\\"
+## For Mac, "/Users/YOURNAME/path/"
+
+library(rjson)
+library(jsonlite)
+library(data.table)
+library(readr)
+
+## CSV method
+govfiles= read.csv(file="https://github.com/datageneration/datamethods/raw/refs/heads/master/webdata/govinfo-search-results-2024-10-13T07_10_42.csv", skip=2)
+
+## JSON method
+### rjson
+gf_list <- rjson::fromJSON(file ="https://github.com/datageneration/datamethods/raw/refs/heads/master/webdata/govinfo-search-results-2024-10-13T07_18_29.json")
+govfile2=dplyr::bind_rows(gf_list$resultSet)
+
+### jsonlite
+gf_list1 = jsonlite::read_json("https://github.com/datageneration/datamethods/raw/refs/heads/master/webdata/govinfo-search-results-2024-10-13T07_18_29.json")
+
+### Extract the list
+govfiles3 <- gf_list1$resultSet
+
+### One more step
+govfiles3 <- gf_list1$resultSet |> dplyr::bind_rows()
+
+
+# Preparing for bulk download of government documents
+govfiles$id = govfiles$packageId
+pdf_govfiles_url = govfiles3$pdfLink
+pdf_govfiles_id <- govfiles3$index
+
+# Directory to save the pdf's
+# Be sure to create a folder for storing the pdf's
+save_dir <- "yourpath"
+
+# Function to download pdfs
+download_govfiles_pdf <- function(url, id) {
+  tryCatch({
+    destfile <- paste0(save_dir, "govfiles_", id, ".pdf")
+    download.file(url, destfile = destfile, mode = "wb") # Binary files
+    Sys.sleep(runif(1, 1, 3))  # Important: random sleep between 1 and 3 seconds to avoid suspicion of "hacking" the server
+    return(paste("Successfully downloaded:", url))
+  },
+  error = function(e) {
+    return(paste("Failed to download:", url))
+  })
+}
+
+# Download files, potentially in parallel for speed
+# Simple timer, can use package like tictoc
+# 
+
+## Try downloading one document
+start.time <- Sys.time()
+message("Starting downloads")
+results <- 1:1 %>%
+  purrr::map_chr(~ download_govfiles_pdf(pdf_govfiles_url[.], pdf_govfiles_id[.]))
+message("Finished downloads")
+end.time <- Sys.time()
+time.taken <- end.time - start.time
+time.taken
+
+## Try five
+# start.time <- Sys.time()
+# message("Starting downloads")
+# results <- 1:5 %>% 
+#   purrr::map_chr(~ download_govfiles_pdf(pdf_govfiles_url[.], pdf_govfiles_id[.]))
+# message("Finished downloads")
+# end.time <- Sys.time()
+# time.taken <- end.time - start.time
+# time.taken
+# 
+# # Print results
+# print(results)
+# 
+# # ## Download all: Caution, this may take a while and lots of space
+# start.time <- Sys.time()
+# message("Starting downloads")
+# results <- 1:length(pdf_govfiles_url) %>%
+#   purrr::map_chr(~ download_govfiles_pdf(pdf_govfiles_url[.], pdf_govfiles_id[.]))
+# message("Finished downloads")
+# end.time <- Sys.time()
+# time.taken <- end.time - start.time
+# time.taken
+# print(results)
+# print(start.time)
+# print(end.time)
+```
