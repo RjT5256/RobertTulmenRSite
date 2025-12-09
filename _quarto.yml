@@ -22,7 +22,9 @@ website:
     - text: "Web Scraping"
       href: webscraping.html
     - text: "Scraping Government Data"
-      href: govscraping.html    
+      href: govscraping.html
+    - text: "Using Quanteda"
+      href: usingquanteda.html      
 
 
 format:
