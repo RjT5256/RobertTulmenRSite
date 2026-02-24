@@ -3,6 +3,7 @@ title: "Using Quanteda"
 ---
 
 Quanteda is an R package for managing and analyzing text. It was created by Kenneth Benoit and Kohei Wantabe and funded by the European Research Council. Quanteda is on it's fourth version now and can do pretty impressive things inside of R studios, say, compare word frequency among presidents Trump and Obama, lexicon dispersion, and many more... Take a look below!
+
 ```{r}
 #| echo: false
 # Sample program for using quanteda for text modeling and analysis

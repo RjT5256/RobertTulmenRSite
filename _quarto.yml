@@ -13,6 +13,10 @@ website:
       href: research.html
     - text: "CV"
       href: cv.pdf
+    - text: "Programming Basics I"
+      href: assignment1.html      
+    - text: "Programming Basics II"
+      href: continuedAssignment1.html      
     - text: "Insight on Data and ML"
       href: assignment2.html
     - text: "Election Data Discrepancies"

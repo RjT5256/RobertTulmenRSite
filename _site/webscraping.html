@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -32,14 +32,15 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2ae7dbb6a8a91d2d75a298d77e53d9d4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-980b7731fb1d77f0b19a7f8959812838.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,6 +80,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Robert J. Tulmen</span>
     </a>
@@ -171,12 +174,12 @@ ul.task-list li input[type="checkbox"] {
 <pre><code># A tibble: 6 × 7
    Rank Name      `Current Players` `Last 30 Days` `Peak Players` `Hours Played`
   &lt;dbl&gt; &lt;chr&gt;                 &lt;int&gt; &lt;lgl&gt;                   &lt;int&gt;          &lt;int&gt;
-1     1 Counter-…           1274415 NA                    1571060      681345750
-2     2 Dota 2               737481 NA                     953869      427383392
-3     3 PUBG: BA…            578070 NA                     707773      205646798
-4     4 Delta Fo…            216434 NA                     246418       79347051
-5     5 Apex Leg…            148337 NA                     201139       62213902
-6     6 Wallpape…            139489 NA                     141058       57902830
+1     1 Counter-…           1389870 NA                    1654355      792039043
+2     2 Dota 2               671087 NA                     855690      425852108
+3     3 ARC Raid…            235982 NA                     419964      160717694
+4     4 PUBG: BA…            231184 NA                     712143      209833969
+5     5 Rust                 164366 NA                     228230       84495691
+6     6 HELLDIVE…            150237 NA                     151118       34102362
 # ℹ 1 more variable: Page &lt;int&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
@@ -186,16 +189,16 @@ ul.task-list li input[type="checkbox"] {
 <pre><code># A tibble: 250 × 6
     Rank Name              `Current Players` `Peak Players` `Hours Played`  Page
    &lt;dbl&gt; &lt;chr&gt;                         &lt;int&gt;          &lt;int&gt;          &lt;int&gt; &lt;int&gt;
- 1     1 Counter-Strike 2            1274415        1571060      681345750     1
- 2     2 Dota 2                       737481         953869      427383392     1
- 3     3 PUBG: BATTLEGROU…            578070         707773      205646798     1
- 4     4 Delta Force                  216434         246418       79347051     1
- 5     5 Apex Legends                 148337         201139       62213902     1
- 6     6 Wallpaper Engine             139489         141058       57902830     1
- 7     7 Hollow Knight: S…            123651         462134      104464739     1
- 8     8 Bongo Cat                    116947         136696       71393689     1
- 9     9 Monster Hunter W…            114034         127322       10842522     1
-10    10 NARAKA: BLADEPOI…            111478         140882       34813042     1
+ 1     1 Counter-Strike 2            1389870        1654355      792039043     1
+ 2     2 Dota 2                       671087         855690      425852108     1
+ 3     3 ARC Raiders                  235982         419964      160717694     1
+ 4     4 PUBG: BATTLEGROU…            231184         712143      209833969     1
+ 5     5 Rust                         164366         228230       84495691     1
+ 6     6 HELLDIVERS™ 2                150237         151118       34102362     1
+ 7     7 Bongo Cat                    140555         176292       99724926     1
+ 8     8 FiveM                        133294         145593       49824779     1
+ 9     9 Terraria                     117289         226559       59594143     1
+10    10 Grand Theft Auto…             96900         129542       57089129     1
 # ℹ 240 more rows</code></pre>
 </div>
 </div>
@@ -254,13 +257,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
