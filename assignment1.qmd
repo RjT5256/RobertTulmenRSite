@@ -42,7 +42,6 @@ rm(list=ls()) # Danger! What does this do?  Not recommended!
 
 ```{r}
 #| echo: true
-?matrix
 x=matrix(data=c(1,2,3,4), nrow=2, ncol=2) # Create a 2x2 matrix object
 x
 x=matrix(c(1,2,3,4),2,2)
