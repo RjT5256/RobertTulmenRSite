@@ -16,7 +16,9 @@ website:
     - text: "Programming Basics I"
       href: assignment1.html      
     - text: "Programming Basics II"
-      href: continuedAssignment1.html      
+      href: continuedAssignment1.html
+    - text: "Reference Minging"
+      href: referencemining.html    
     - text: "Insight on Data and ML"
       href: assignment2.html
     - text: "Election Data Discrepancies"
