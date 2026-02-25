@@ -13,12 +13,14 @@ website:
       href: research.html
     - text: "CV"
       href: cv.pdf
-    - text: "Programming Basics I"
+    - text: "Lab 1"
       href: assignment1.html      
-    - text: "Programming Basics II"
+    - text: "Lab 2"
       href: continuedAssignment1.html
     - text: "Reference Minging"
-      href: referencemining.html    
+      href: continuedAssignment1.html
+    - text: "Weekly Reflections"
+      href: weeklyreflections.html    
     - text: "Insight on Data and ML"
       href: assignment2.html
     - text: "Election Data Discrepancies"
