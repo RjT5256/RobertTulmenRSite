@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 4 – Robert J. Tulmen</title>
+<title>assignment4 – Robert J. Tulmen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,41 +68,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+</head><body class="nav-fixed quarto-light">\usepackage{pdfpages}
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
-</head>
 
-<body class="nav-fixed quarto-light">
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -122,7 +94,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -139,39 +111,27 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./assignment1.html"> 
-<span class="menu-text">Lab 1</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./continuedAssignment1.html"> 
-<span class="menu-text">Lab 2</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./continuedAssignment1.html"> 
-<span class="menu-text">Reference Minging</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./weeklyreflections.html"> 
-<span class="menu-text">Weekly Reflections</span></a>
+<span class="menu-text">Assignment 1</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./assignment2.html"> 
-<span class="menu-text">Insight on Data and ML</span></a>
+<span class="menu-text">Assignment 2</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./assignment3.html"> 
-<span class="menu-text">Election Data Discrepancies</span></a>
+<span class="menu-text">Assignment 3</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./assignment4.pdf"> 
+<span class="menu-text">Assignment 4</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./techstudy.html"> 
 <span class="menu-text">Tech Study</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./webscraping.html"> 
-<span class="menu-text">Web Scraping</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./govscraping.html"> 
-<span class="menu-text">Scraping Government Data</span></a>
+<span class="menu-text">Web Scraping</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./usingquanteda.html"> 
@@ -189,539 +149,16 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#hackathon" id="toc-hackathon" class="nav-link active" data-scroll-target="#hackathon">Hackathon</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">============================================================================</a></li>
-  <li><a href="#political-science-jobs-quanteda-analysis-starter" id="toc-political-science-jobs-quanteda-analysis-starter" class="nav-link" data-scroll-target="#political-science-jobs-quanteda-analysis-starter">Political Science Jobs — Quanteda Analysis Starter</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">============================================================================</a></li>
-  <li><a href="#this-script-loads-the-pre-processed-job-ads-data-and-walks-through" id="toc-this-script-loads-the-pre-processed-job-ads-data-and-walks-through" class="nav-link" data-scroll-target="#this-script-loads-the-pre-processed-job-ads-data-and-walks-through">This script loads the pre-processed job ads data and walks through</a></li>
-  <li><a href="#three-analyses-you-can-run-and-customize" id="toc-three-analyses-you-can-run-and-customize" class="nav-link" data-scroll-target="#three-analyses-you-can-run-and-customize">three analyses you can run and customize:</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
-  <li><a href="#top-words-what-terms-appear-most-in-job-ads" id="toc-top-words-what-terms-appear-most-in-job-ads" class="nav-link" data-scroll-target="#top-words-what-terms-appear-most-in-job-ads">1. Top words — what terms appear most in job ads?</a></li>
-  <li><a href="#keyness-what-words-are-distinctive-in-one-group-vs-another" id="toc-keyness-what-words-are-distinctive-in-one-group-vs-another" class="nav-link" data-scroll-target="#keyness-what-words-are-distinctive-in-one-group-vs-another">2. Keyness — what words are distinctive in one group vs another?</a></li>
-  <li><a href="#trends-how-has-a-terms-usage-changed-over-time" id="toc-trends-how-has-a-terms-usage-changed-over-time" class="nav-link" data-scroll-target="#trends-how-has-a-terms-usage-changed-over-time">3. Trends — how has a term’s usage changed over time?</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"></a></li>
-  <li><a href="#to-get-started-change-the-path-in-setup-to-wherever-you-saved-the-.rds" id="toc-to-get-started-change-the-path-in-setup-to-wherever-you-saved-the-.rds" class="nav-link" data-scroll-target="#to-get-started-change-the-path-in-setup-to-wherever-you-saved-the-.rds">To get started: change the path in “SETUP” to wherever you saved the .rds</a></li>
-  <li><a href="#then-run-the-whole-script-top-to-bottom-ctrla-ctrlenter" id="toc-then-run-the-whole-script-top-to-bottom-ctrla-ctrlenter" class="nav-link" data-scroll-target="#then-run-the-whole-script-top-to-bottom-ctrla-ctrlenter">Then run the whole script top to bottom (Ctrl+A, Ctrl+Enter)</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">============================================================================</a></li>
-  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">── SETUP ────────────────────────────────────────────────────────────────────</a></li>
-  <li><a href="#install-packages-if-you-havent-already-only-need-to-do-this-once" id="toc-install-packages-if-you-havent-already-only-need-to-do-this-once" class="nav-link" data-scroll-target="#install-packages-if-you-havent-already-only-need-to-do-this-once">Install packages if you haven’t already — only need to do this once</a></li>
-  <li><a href="#install.packagesctidyversetidytext-quanteda-quanteda.textstats" id="toc-install.packagesctidyversetidytext-quanteda-quanteda.textstats" class="nav-link" data-scroll-target="#install.packagesctidyversetidytext-quanteda-quanteda.textstats">install.packages(c(“tidyverse”,“tidytext”, “quanteda”, “quanteda.textstats”,</a></li>
-  <li><a href="#quanteda.textplots-showtext-ggplot2-usmap-ggrepel" id="toc-quanteda.textplots-showtext-ggplot2-usmap-ggrepel" class="nav-link" data-scroll-target="#quanteda.textplots-showtext-ggplot2-usmap-ggrepel">“quanteda.textplots”, “showtext”, “ggplot2”, “usmap”, “ggrepel”))</a></li>
-  <li><a href="#change-this-to-wherever-you-saved-the-.rds-file" id="toc-change-this-to-wherever-you-saved-the-.rds-file" class="nav-link" data-scroll-target="#change-this-to-wherever-you-saved-the-.rds-file">!! CHANGE THIS to wherever you saved the .rds file !!</a></li>
-  <li><a href="#load-the-data" id="toc-load-the-data" class="nav-link" data-scroll-target="#load-the-data">Load the data</a></li>
-  <li><a href="#preview" id="toc-preview" class="nav-link" data-scroll-target="#preview">Preview</a></li>
-  <li><a href="#theme-for-nice-plots" id="toc-theme-for-nice-plots" class="nav-link" data-scroll-target="#theme-for-nice-plots">── THEME (for nice plots) ───────────────────────────────────────────────────</a></li>
-  <li><a href="#build-the-corpus-tokens-and-dfm" id="toc-build-the-corpus-tokens-and-dfm" class="nav-link" data-scroll-target="#build-the-corpus-tokens-and-dfm">── BUILD THE CORPUS, TOKENS, AND DFM ────────────────────────────────────────</a></li>
-  <li><a href="#you-only-need-to-run-this-block-once-per-session." id="toc-you-only-need-to-run-this-block-once-per-session." class="nav-link" data-scroll-target="#you-only-need-to-run-this-block-once-per-session.">You only need to run this block once per session.</a></li>
-  <li><a href="#these-three-objects-are-the-foundation-for-all-analyses-below." id="toc-these-three-objects-are-the-foundation-for-all-analyses-below." class="nav-link" data-scroll-target="#these-three-objects-are-the-foundation-for-all-analyses-below.">These three objects are the foundation for all analyses below.</a></li>
-  <li><a href="#step-1-corpus-wraps-the-text-keeps-all-your-metadata-attached" id="toc-step-1-corpus-wraps-the-text-keeps-all-your-metadata-attached" class="nav-link" data-scroll-target="#step-1-corpus-wraps-the-text-keeps-all-your-metadata-attached">Step 1: corpus — wraps the text + keeps all your metadata attached</a></li>
-  <li><a href="#step-2-tokens-splits-text-into-words-removes-noise" id="toc-step-2-tokens-splits-text-into-words-removes-noise" class="nav-link" data-scroll-target="#step-2-tokens-splits-text-into-words-removes-noise">Step 2: tokens — splits text into words, removes noise</a>
-  <ul class="collapse">
-  <li><a href="#add-entries-to-this-section-to-tell-the-analysis-to-ignore-a-certain-word.-below-are-what-ive-removed-to-start." id="toc-add-entries-to-this-section-to-tell-the-analysis-to-ignore-a-certain-word.-below-are-what-ive-removed-to-start." class="nav-link" data-scroll-target="#add-entries-to-this-section-to-tell-the-analysis-to-ignore-a-certain-word.-below-are-what-ive-removed-to-start.">Add entries to this section to tell the analysis to ignore a certain word. Below are what I’ve removed to start.</a></li>
-  </ul></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">============================================================================</a></li>
-  <li><a href="#analysis-1-top-words" id="toc-analysis-1-top-words" class="nav-link" data-scroll-target="#analysis-1-top-words">ANALYSIS 1 — TOP WORDS</a></li>
-  <li><a href="#what-terms-appear-most-often-across-all-job-ads" id="toc-what-terms-appear-most-often-across-all-job-ads" class="nav-link" data-scroll-target="#what-terms-appear-most-often-across-all-job-ads">What terms appear most often across all job ads?</a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">============================================================================</a></li>
-  <li><a href="#a.-overall-top-words" id="toc-a.-overall-top-words" class="nav-link" data-scroll-target="#a.-overall-top-words">── 1a. Overall top words ────────────────────────────────────────────────────</a></li>
-  <li><a href="#b.-top-words-by-section" id="toc-b.-top-words-by-section" class="nav-link" data-scroll-target="#b.-top-words-by-section">── 1b. Top words by section ─────────────────────────────────────────────────</a></li>
-  <li><a href="#change-the-section-name-below-to-explore-different-subfields" id="toc-change-the-section-name-below-to-explore-different-subfields" class="nav-link" data-scroll-target="#change-the-section-name-below-to-explore-different-subfields">Change the section name below to explore different subfields</a></li>
-  <li><a href="#options-administration-comparative-politics-international-relations" id="toc-options-administration-comparative-politics-international-relations" class="nav-link" data-scroll-target="#options-administration-comparative-politics-international-relations">Options: ADMINISTRATION, COMPARATIVE POLITICS, INTERNATIONAL RELATIONS,</a></li>
-  <li><a href="#methodology-non-academic-other-political-theory" id="toc-methodology-non-academic-other-political-theory" class="nav-link" data-scroll-target="#methodology-non-academic-other-political-theory">METHODOLOGY, NON-ACADEMIC, OTHER, POLITICAL THEORY,</a></li>
-  <li><a href="#public-administration-public-law-public-policy-open" id="toc-public-administration-public-law-public-policy-open" class="nav-link" data-scroll-target="#public-administration-public-law-public-policy-open">PUBLIC ADMINISTRATION, PUBLIC LAW, PUBLIC POLICY, OPEN</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">============================================================================</a></li>
-  <li><a href="#analysis-2-keyness" id="toc-analysis-2-keyness" class="nav-link" data-scroll-target="#analysis-2-keyness">ANALYSIS 2 — KEYNESS</a></li>
-  <li><a href="#what-words-are-distinctively-more-common-in-one-group-vs-another" id="toc-what-words-are-distinctively-more-common-in-one-group-vs-another" class="nav-link" data-scroll-target="#what-words-are-distinctively-more-common-in-one-group-vs-another">What words are distinctively more common in one group vs another?</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">============================================================================</a></li>
-  <li><a href="#a.-pre-covid-vs-post-covid" id="toc-a.-pre-covid-vs-post-covid" class="nav-link" data-scroll-target="#a.-pre-covid-vs-post-covid">── 2a. Pre-COVID vs Post-COVID ───────────────────────────────────────────────</a></li>
-  <li><a href="#b.-one-section-vs-all-others" id="toc-b.-one-section-vs-all-others" class="nav-link" data-scroll-target="#b.-one-section-vs-all-others">── 2b. One section vs all others ────────────────────────────────────────────</a></li>
-  <li><a href="#change-section_to_explore-above-or-set-a-new-one-here" id="toc-change-section_to_explore-above-or-set-a-new-one-here" class="nav-link" data-scroll-target="#change-section_to_explore-above-or-set-a-new-one-here">Change SECTION_TO_EXPLORE above, or set a new one here</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">============================================================================</a></li>
-  <li><a href="#analysis-3-trends-over-time" id="toc-analysis-3-trends-over-time" class="nav-link" data-scroll-target="#analysis-3-trends-over-time">ANALYSIS 3 — TRENDS OVER TIME</a></li>
-  <li><a href="#how-has-the-use-of-specific-terms-changed-across-years" id="toc-how-has-the-use-of-specific-terms-changed-across-years" class="nav-link" data-scroll-target="#how-has-the-use-of-specific-terms-changed-across-years">How has the use of specific terms changed across years?</a></li>
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">============================================================================</a></li>
-  <li><a href="#a.-track-terms-of-interest" id="toc-a.-track-terms-of-interest" class="nav-link" data-scroll-target="#a.-track-terms-of-interest">── 3a. Track terms of interest ──────────────────────────────────────────────</a></li>
-  <li><a href="#add-or-remove-terms-from-this-list" id="toc-add-or-remove-terms-from-this-list" class="nav-link" data-scroll-target="#add-or-remove-terms-from-this-list">Add or remove terms from this list</a></li>
-  <li><a href="#b.-normalize-by-number-of-ads-per-year-relative-frequency" id="toc-b.-normalize-by-number-of-ads-per-year-relative-frequency" class="nav-link" data-scroll-target="#b.-normalize-by-number-of-ads-per-year-relative-frequency">── 3b. Normalize by number of ads per year (relative frequency) ─────────────</a></li>
-  <li><a href="#raw-counts-can-be-misleading-if-some-years-have-more-ads-than-others." id="toc-raw-counts-can-be-misleading-if-some-years-have-more-ads-than-others." class="nav-link" data-scroll-target="#raw-counts-can-be-misleading-if-some-years-have-more-ads-than-others.">Raw counts can be misleading if some years have more ads than others.</a></li>
-  <li><a href="#this-shows-occurrences-per-1000-ads-instead." id="toc-this-shows-occurrences-per-1000-ads-instead." class="nav-link" data-scroll-target="#this-shows-occurrences-per-1000-ads-instead.">This shows occurrences per 1,000 ads instead.</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">============================================================================</a></li>
-  <li><a href="#analysis-4-ad-volume-over-time" id="toc-analysis-4-ad-volume-over-time" class="nav-link" data-scroll-target="#analysis-4-ad-volume-over-time">ANALYSIS 4 — AD VOLUME OVER TIME</a></li>
-  <li><a href="#how-many-job-listings-were-posted-each-year" id="toc-how-many-job-listings-were-posted-each-year" class="nav-link" data-scroll-target="#how-many-job-listings-were-posted-each-year">How many job listings were posted each year?</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">============================================================================</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">============================================================================</a></li>
-  <li><a href="#analysis-5-ad-volume-by-section-over-time" id="toc-analysis-5-ad-volume-by-section-over-time" class="nav-link" data-scroll-target="#analysis-5-ad-volume-by-section-over-time">ANALYSIS 5 — AD VOLUME BY SECTION OVER TIME</a></li>
-  <li><a href="#how-has-posting-volume-changed-within-each-job-type-across-years" id="toc-how-has-posting-volume-changed-within-each-job-type-across-years" class="nav-link" data-scroll-target="#how-has-posting-volume-changed-within-each-job-type-across-years">How has posting volume changed within each job type across years?</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">============================================================================</a></li>
-  <li><a href="#a.-faceted-line-chart-one-panel-per-section" id="toc-a.-faceted-line-chart-one-panel-per-section" class="nav-link" data-scroll-target="#a.-faceted-line-chart-one-panel-per-section">── 5a. Faceted line chart — one panel per section ───────────────────────────</a></li>
-  <li><a href="#b.-stacked-area-chart-overall-composition-shift-at-a-glance" id="toc-b.-stacked-area-chart-overall-composition-shift-at-a-glance" class="nav-link" data-scroll-target="#b.-stacked-area-chart-overall-composition-shift-at-a-glance">── 5b. Stacked area chart — overall composition shift at a glance ───────────</a></li>
-  <li><a href="#section-15" id="toc-section-15" class="nav-link" data-scroll-target="#section-15">============================================================================</a></li>
-  <li><a href="#analysis-6-emerging-vs-declining-keywords-by-section" id="toc-analysis-6-emerging-vs-declining-keywords-by-section" class="nav-link" data-scroll-target="#analysis-6-emerging-vs-declining-keywords-by-section">ANALYSIS 6 — EMERGING vs DECLINING KEYWORDS BY SECTION</a></li>
-  <li><a href="#compares-the-earliest-years-vs-most-recent-years-within-each-section" id="toc-compares-the-earliest-years-vs-most-recent-years-within-each-section" class="nav-link" data-scroll-target="#compares-the-earliest-years-vs-most-recent-years-within-each-section">Compares the earliest years vs most recent years within each section</a></li>
-  <li><a href="#to-surface-vocabulary-that-is-genuinely-entering-or-leaving-the-field." id="toc-to-surface-vocabulary-that-is-genuinely-entering-or-leaving-the-field." class="nav-link" data-scroll-target="#to-surface-vocabulary-that-is-genuinely-entering-or-leaving-the-field.">to surface vocabulary that is genuinely entering or leaving the field.</a></li>
-  <li><a href="#section-16" id="toc-section-16" class="nav-link" data-scroll-target="#section-16">============================================================================</a></li>
-  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters">── Parameters ───────────────────────────────────────────────────────────────</a></li>
-  <li><a href="#define-how-many-years-to-treat-as-early-and-late-windows." id="toc-define-how-many-years-to-treat-as-early-and-late-windows." class="nav-link" data-scroll-target="#define-how-many-years-to-treat-as-early-and-late-windows.">Define how many years to treat as “early” and “late” windows.</a></li>
-  <li><a href="#e.g.-n_years-2-means-earliest-2-years-vs-latest-2-years-in-each-section." id="toc-e.g.-n_years-2-means-earliest-2-years-vs-latest-2-years-in-each-section." class="nav-link" data-scroll-target="#e.g.-n_years-2-means-earliest-2-years-vs-latest-2-years-in-each-section.">E.g., N_YEARS = 2 means earliest 2 years vs latest 2 years in each section.</a></li>
-  <li><a href="#helper-run-keyness-for-one-section" id="toc-helper-run-keyness-for-one-section" class="nav-link" data-scroll-target="#helper-run-keyness-for-one-section">── Helper: run keyness for one section ──────────────────────────────────────</a></li>
-  <li><a href="#run-across-all-sections" id="toc-run-across-all-sections" class="nav-link" data-scroll-target="#run-across-all-sections">── Run across all sections ───────────────────────────────────────────────────</a></li>
-  <li><a href="#a.-faceted-diverging-bar-chart" id="toc-a.-faceted-diverging-bar-chart" class="nav-link" data-scroll-target="#a.-faceted-diverging-bar-chart">── 6a. Faceted diverging bar chart ──────────────────────────────────────────</a></li>
-  <li><a href="#one-panel-per-section.-bars-point-right-emerging-or-left-declining." id="toc-one-panel-per-section.-bars-point-right-emerging-or-left-declining." class="nav-link" data-scroll-target="#one-panel-per-section.-bars-point-right-emerging-or-left-declining.">One panel per section. Bars point right (emerging) or left (declining).</a></li>
-  <li><a href="#b.-salary-pay-mentions-by-section" id="toc-b.-salary-pay-mentions-by-section" class="nav-link" data-scroll-target="#b.-salary-pay-mentions-by-section">── 6b. Salary / pay mentions by section ─────────────────────────────────────</a></li>
-  <li><a href="#c.-chi-squared-test-for-remote-pre--vs-post-covid" id="toc-c.-chi-squared-test-for-remote-pre--vs-post-covid" class="nav-link" data-scroll-target="#c.-chi-squared-test-for-remote-pre--vs-post-covid">── 6c. Chi-squared test for “remote” pre- vs post-COVID──────────────────────</a></li>
-  <li><a href="#build-the-contingency-table" id="toc-build-the-contingency-table" class="nav-link" data-scroll-target="#build-the-contingency-table">Build the contingency table</a></li>
-  <li><a href="#run-the-chi-squared-test" id="toc-run-the-chi-squared-test" class="nav-link" data-scroll-target="#run-the-chi-squared-test">Run the chi-squared test</a></li>
-  <li><a href="#print-readable-results" id="toc-print-readable-results" class="nav-link" data-scroll-target="#print-readable-results">Print readable results</a></li>
-  <li><a href="#visualization-remote-pre--vs-post-covid" id="toc-visualization-remote-pre--vs-post-covid" class="nav-link" data-scroll-target="#visualization-remote-pre--vs-post-covid">── Visualization: “remote” pre- vs post-COVID ────────────────────────────────</a></li>
-  <li><a href="#c.-observed-vs-expected-grouped-bar" id="toc-c.-observed-vs-expected-grouped-bar" class="nav-link" data-scroll-target="#c.-observed-vs-expected-grouped-bar">── 6c. Observed vs Expected grouped bar ─────────────────────────────────────</a></li>
-  <li><a href="#section-17" id="toc-section-17" class="nav-link" data-scroll-target="#section-17">============================================================================</a></li>
-  <li><a href="#analysis-7-map-of-highest-paying-job-listings-by-state" id="toc-analysis-7-map-of-highest-paying-job-listings-by-state" class="nav-link" data-scroll-target="#analysis-7-map-of-highest-paying-job-listings-by-state">ANALYSIS 7 — MAP OF HIGHEST PAYING JOB LISTINGS BY STATE</a></li>
-  <li><a href="#extracts-salary-figures-from-ad-text-aggregates-by-state-plots-choropleth" id="toc-extracts-salary-figures-from-ad-text-aggregates-by-state-plots-choropleth" class="nav-link" data-scroll-target="#extracts-salary-figures-from-ad-text-aggregates-by-state-plots-choropleth">Extracts salary figures from ad text, aggregates by state, plots choropleth</a></li>
-  <li><a href="#section-18" id="toc-section-18" class="nav-link" data-scroll-target="#section-18">============================================================================</a></li>
-  <li><a href="#step-1-extract-salary-figures-from-raw-ad-text" id="toc-step-1-extract-salary-figures-from-raw-ad-text" class="nav-link" data-scroll-target="#step-1-extract-salary-figures-from-raw-ad-text">── Step 1: Extract salary figures from raw ad text ──────────────────────────</a></li>
-  <li><a href="#catches-formats-like-80000-80k-120000-140000-80000-usd" id="toc-catches-formats-like-80000-80k-120000-140000-80000-usd" class="nav-link" data-scroll-target="#catches-formats-like-80000-80k-120000-140000-80000-usd">Catches formats like $80,000 | $80k | $120,000-$140,000 | 80,000 USD</a></li>
-  <li><a href="#step-2-aggregate-median-salary-by-state" id="toc-step-2-aggregate-median-salary-by-state" class="nav-link" data-scroll-target="#step-2-aggregate-median-salary-by-state">── Step 2: Aggregate median salary by state ─────────────────────────────────</a></li>
-  <li><a href="#step-3-check-what-your-state-column-looks-like" id="toc-step-3-check-what-your-state-column-looks-like" class="nav-link" data-scroll-target="#step-3-check-what-your-state-column-looks-like">── Step 3: Check what your state column looks like ──────────────────────────</a></li>
-  <li><a href="#run-this-to-confirm-format-before-plotting" id="toc-run-this-to-confirm-format-before-plotting" class="nav-link" data-scroll-target="#run-this-to-confirm-format-before-plotting">Run this to confirm format before plotting</a></li>
-  <li><a href="#step-4-merge-with-usmap-state-data" id="toc-step-4-merge-with-usmap-state-data" class="nav-link" data-scroll-target="#step-4-merge-with-usmap-state-data">── Step 4: Merge with usmap state data ──────────────────────────────────────</a></li>
-  <li><a href="#if-your-state-column-contains-full-names-e.g.-pennsylvania" id="toc-if-your-state-column-contains-full-names-e.g.-pennsylvania" class="nav-link" data-scroll-target="#if-your-state-column-contains-full-names-e.g.-pennsylvania">If your state column contains full names (e.g.&nbsp;“Pennsylvania”):</a></li>
-  <li><a href="#if-your-state-column-contains-abbreviations-e.g.-pa-use-this-instead" id="toc-if-your-state-column-contains-abbreviations-e.g.-pa-use-this-instead" class="nav-link" data-scroll-target="#if-your-state-column-contains-abbreviations-e.g.-pa-use-this-instead">If your state column contains abbreviations (e.g.&nbsp;“PA”), use this instead:</a></li>
-  <li><a href="#state_map_data---salary_by_state" id="toc-state_map_data---salary_by_state" class="nav-link" data-scroll-target="#state_map_data---salary_by_state">state_map_data &lt;- salary_by_state %&gt;%</a></li>
-  <li><a href="#left_joinusmapus_mapstates-selectabbr-full-distinct" id="toc-left_joinusmapus_mapstates-selectabbr-full-distinct" class="nav-link" data-scroll-target="#left_joinusmapus_mapstates-selectabbr-full-distinct">left_join(usmap::us_map(“states”) %&gt;% select(abbr, full) %&gt;% distinct(),</a></li>
-  <li><a href="#by-cstate_col-abbr" id="toc-by-cstate_col-abbr" class="nav-link" data-scroll-target="#by-cstate_col-abbr">by = c(“state_col” = “abbr”)) %&gt;%</a></li>
-  <li><a href="#renamestate-full" id="toc-renamestate-full" class="nav-link" data-scroll-target="#renamestate-full">rename(state = full)</a></li>
-  <li><a href="#step-5-choropleth-map" id="toc-step-5-choropleth-map" class="nav-link" data-scroll-target="#step-5-choropleth-map">── Step 5: Choropleth map ───────────────────────────────────────────────────</a></li>
-  <li><a href="#step-6-bar-chart-companion-top-15-states-by-median-salary" id="toc-step-6-bar-chart-companion-top-15-states-by-median-salary" class="nav-link" data-scroll-target="#step-6-bar-chart-companion-top-15-states-by-median-salary">── Step 6: Bar chart companion — top 15 states by median salary ─────────────</a></li>
-  <li><a href="#useful-since-the-map-can-obscure-small-states-like-ct-ri-dc" id="toc-useful-since-the-map-can-obscure-small-states-like-ct-ri-dc" class="nav-link" data-scroll-target="#useful-since-the-map-can-obscure-small-states-like-ct-ri-dc">Useful since the map can obscure small states like CT, RI, DC</a></li>
-  </ul>
-</nav>
-    </div>
+        
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="assignment4.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Assignment 4</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
 
-
-<section id="hackathon" class="level1">
-<h1>Hackathon</h1>
-</section>
-<section id="section" class="level1">
-<h1>============================================================================</h1>
-</section>
-<section id="political-science-jobs-quanteda-analysis-starter" class="level1">
-<h1>Political Science Jobs — Quanteda Analysis Starter</h1>
-</section>
-<section id="section-1" class="level1">
-<h1>============================================================================</h1>
-</section>
-<section id="this-script-loads-the-pre-processed-job-ads-data-and-walks-through" class="level1">
-<h1>This script loads the pre-processed job ads data and walks through</h1>
-</section>
-<section id="three-analyses-you-can-run-and-customize" class="level1">
-<h1>three analyses you can run and customize:</h1>
-</section>
-<section id="section-2" class="level1">
-<h1></h1>
-</section>
-<section id="top-words-what-terms-appear-most-in-job-ads" class="level1">
-<h1>1. Top words — what terms appear most in job ads?</h1>
-</section>
-<section id="keyness-what-words-are-distinctive-in-one-group-vs-another" class="level1">
-<h1>2. Keyness — what words are distinctive in one group vs another?</h1>
-</section>
-<section id="trends-how-has-a-terms-usage-changed-over-time" class="level1">
-<h1>3. Trends — how has a term’s usage changed over time?</h1>
-</section>
-<section id="section-3" class="level1">
-<h1></h1>
-</section>
-<section id="to-get-started-change-the-path-in-setup-to-wherever-you-saved-the-.rds" class="level1">
-<h1>To get started: change the path in “SETUP” to wherever you saved the .rds</h1>
-</section>
-<section id="then-run-the-whole-script-top-to-bottom-ctrla-ctrlenter" class="level1">
-<h1>Then run the whole script top to bottom (Ctrl+A, Ctrl+Enter)</h1>
-</section>
-<section id="section-4" class="level1">
-<h1>============================================================================</h1>
-</section>
-<section id="setup" class="level1">
-<h1>── SETUP ────────────────────────────────────────────────────────────────────</h1>
-</section>
-<section id="install-packages-if-you-havent-already-only-need-to-do-this-once" class="level1">
-<h1>Install packages if you haven’t already — only need to do this once</h1>
-</section>
-<section id="install.packagesctidyversetidytext-quanteda-quanteda.textstats" class="level1">
-<h1>install.packages(c(“tidyverse”,“tidytext”, “quanteda”, “quanteda.textstats”,</h1>
-</section>
-<section id="quanteda.textplots-showtext-ggplot2-usmap-ggrepel" class="level1">
-<h1>“quanteda.textplots”, “showtext”, “ggplot2”, “usmap”, “ggrepel”))</h1>
-<p>library(usmap) library(ggrepel) library(tidyverse) library(quanteda) library(quanteda.textstats) library(quanteda.textplots) library(ggplot2) library(showtext) library(tidytext)</p>
-</section>
-<section id="change-this-to-wherever-you-saved-the-.rds-file" class="level1">
-<h1>!! CHANGE THIS to wherever you saved the .rds file !!</h1>
-<p>PATH_RDS &lt;- “~/R Docs/EPPS6323/WordFish/jobads/extract_ads_final.rds”</p>
-</section>
-<section id="load-the-data" class="level1">
-<h1>Load the data</h1>
-<p>ads &lt;- readRDS(PATH_RDS)</p>
-<p>cat(“Loaded”, nrow(ads), “job ads”) cat(“Columns available:”, paste(colnames(ads), collapse = “,”), “”)</p>
-</section>
-<section id="preview" class="level1">
-<h1>Preview</h1>
-<p>glimpse(ads)</p>
-</section>
-<section id="theme-for-nice-plots" class="level1">
-<h1>── THEME (for nice plots) ───────────────────────────────────────────────────</h1>
-<p>font_add_google(“Source Sans 3”, “sourcesans”) font_add_google(“Playfair Display”, “playfair”) showtext_auto()</p>
-<p>civic_cat &lt;- c(“#2D6A5F”, “#D4A843”, “#6BAF9E”, “#E8C97A”, “#0F3830”, “#C8BFA8”)</p>
-<p>theme_civic &lt;- function(base_size = 11) { theme_minimal(base_size = base_size) %+replace% theme( plot.background = element_rect(fill = “#F5F0E8”, color = NA), panel.background = element_rect(fill = “#FFFFFF”, color = NA), panel.grid.major = element_line(color = “#C8BFA8”, linewidth = 0.35), panel.grid.minor = element_blank(), panel.border = element_rect(fill = NA, color = “#C8BFA8”, linewidth = 0.5), plot.title = element_text(family = “playfair”, size = base_size * 1.4, color = “#1C2B2B”, face = “bold”, margin = margin(b = 6)), plot.subtitle = element_text(size = base_size * 0.95, color = “#3A4A45”, margin = margin(b = 12)), plot.caption = element_text(family = “sourcesans”, size = base_size * 0.72, color = “#7A8C85”, hjust = 0, margin = margin(t = 8)), axis.title = element_text(family = “sourcesans”, size = base_size * 0.78, color = “#7A8C85”), axis.text = element_text(family = “sourcesans”, size = base_size * 0.75, color = “#3A4A45”), axis.ticks = element_line(color = “#C8BFA8”), legend.background = element_rect(fill = “#F5F0E8”, color = NA), legend.text = element_text(family = “sourcesans”, size = base_size * 0.75, color = “#3A4A45”), strip.background = element_rect(fill = “#EDE8DC”, color = “#C8BFA8”), strip.text = element_text(family = “sourcesans”, size = base_size * 0.78, color = “#1C2B2B”), plot.margin = margin(16, 16, 16, 16) ) }</p>
-</section>
-<section id="build-the-corpus-tokens-and-dfm" class="level1">
-<h1>── BUILD THE CORPUS, TOKENS, AND DFM ────────────────────────────────────────</h1>
-</section>
-<section id="you-only-need-to-run-this-block-once-per-session." class="level1">
-<h1>You only need to run this block once per session.</h1>
-</section>
-<section id="these-three-objects-are-the-foundation-for-all-analyses-below." class="level1">
-<h1>These three objects are the foundation for all analyses below.</h1>
-</section>
-<section id="step-1-corpus-wraps-the-text-keeps-all-your-metadata-attached" class="level1">
-<h1>Step 1: corpus — wraps the text + keeps all your metadata attached</h1>
-<p>ads &lt;- ads %&gt;% mutate(doc_id = paste0(“ad_”, row_number()))</p>
-<p>job_corpus &lt;- corpus(ads, text_field = “ad_text”, docid_field = “doc_id”)</p>
-</section>
-<section id="step-2-tokens-splits-text-into-words-removes-noise" class="level1">
-<h1>Step 2: tokens — splits text into words, removes noise</h1>
-<section id="add-entries-to-this-section-to-tell-the-analysis-to-ignore-a-certain-word.-below-are-what-ive-removed-to-start." class="level2">
-<h2 class="anchored" data-anchor-id="add-entries-to-this-section-to-tell-the-analysis-to-ignore-a-certain-word.-below-are-what-ive-removed-to-start.">Add entries to this section to tell the analysis to ignore a certain word. Below are what I’ve removed to start.</h2>
-<p>custom_stops &lt;- c( # foreign stopwords stopwords(“fr”), stopwords(“es”),</p>
-<p># academic year patterns “2018-2019”, “2019-2020”, “2020-2021”, “2021-2022”,</p>
-<p># boilerplate legal/admin terms “affirmative”, “employer”, “action”, “send”, “applications”, “equal”, “opportunity”, “discrimination”, “regardless”,</p>
-<p># institution name artifacts — add as you spot them “hampden-sydney”, “kapsarc”, “kspp”, “fudan”, “qss”,</p>
-<p># other noise “three”, “m”, # metadata field labels “ejobs”, “date”, “deadline”, “start”, “salary”, “rank”,</p>
-<p># universal boilerplate “application”, “applications”, “applicants”, “candidates”, “must”,</p>
-<p># too universal to be informative “university”, “college”, “department”, # HTML/CSS artifacts “style”, “margin”, “margin-bottom”, “margin-top”, “font-size”, “font-family”, “sans-serif”, “arial”, “montserrat”, “span”, “0001pt”, “10.0pt”, “lt”, “gt”,</p>
-<p># association acronyms “sfpe”, “ias”, “idinsight”, “aarhus”, “earlham” )</p>
-<p>job_tokens &lt;- tokens( job_corpus, remove_punct = TRUE, remove_numbers = TRUE, remove_symbols = TRUE, remove_url = TRUE ) %&gt;% tokens_tolower() %&gt;% tokens_remove(stopwords(“en”)) %&gt;% tokens_remove(custom_stops)</p>
-<p>job_dfm &lt;- dfm(job_tokens) %&gt;% dfm_trim(min_termfreq = 5, min_docfreq = 2)</p>
-<p>cat(“built:”, ndoc(job_corpus), “documents,”, nfeat(job_dfm), “unique terms”)</p>
-</section>
-</section>
-<section id="section-5" class="level1">
-<h1>============================================================================</h1>
-</section>
-<section id="analysis-1-top-words" class="level1">
-<h1>ANALYSIS 1 — TOP WORDS</h1>
-</section>
-<section id="what-terms-appear-most-often-across-all-job-ads" class="level1">
-<h1>What terms appear most often across all job ads?</h1>
-</section>
-<section id="section-6" class="level1">
-<h1>============================================================================</h1>
-</section>
-<section id="a.-overall-top-words" class="level1">
-<h1>── 1a. Overall top words ────────────────────────────────────────────────────</h1>
-<p>top_words &lt;- topfeatures(job_dfm, n = 30) %&gt;% as.data.frame() %&gt;% rownames_to_column(“term”) %&gt;% rename(count = 2) %&gt;% arrange(desc(count))</p>
-<p>ggplot(top_words, aes(x = reorder(term, count), y = count)) + geom_col(fill = “#2D6A5F”) + coord_flip() + labs( title = “Most common words in political science job ads”, subtitle = “All sections, all years”, x = NULL, y = “Total occurrences”, caption = “Source: APSA eJobs” ) + theme_civic()</p>
-</section>
-<section id="b.-top-words-by-section" class="level1">
-<h1>── 1b. Top words by section ─────────────────────────────────────────────────</h1>
-</section>
-<section id="change-the-section-name-below-to-explore-different-subfields" class="level1">
-<h1>Change the section name below to explore different subfields</h1>
-</section>
-<section id="options-administration-comparative-politics-international-relations" class="level1">
-<h1>Options: ADMINISTRATION, COMPARATIVE POLITICS, INTERNATIONAL RELATIONS,</h1>
-</section>
-<section id="methodology-non-academic-other-political-theory" class="level1">
-<h1>METHODOLOGY, NON-ACADEMIC, OTHER, POLITICAL THEORY,</h1>
-</section>
-<section id="public-administration-public-law-public-policy-open" class="level1">
-<h1>PUBLIC ADMINISTRATION, PUBLIC LAW, PUBLIC POLICY, OPEN</h1>
-<p>SECTION_TO_EXPLORE &lt;- “METHODOLOGY” # ← CHANGE THIS</p>
-<p>top_by_section &lt;- job_dfm %&gt;% dfm_subset(section == SECTION_TO_EXPLORE) %&gt;% topfeatures(n = 20) %&gt;% as.data.frame() %&gt;% rownames_to_column(“term”) %&gt;% rename(count = 2)</p>
-<p>ggplot(top_by_section, aes(x = reorder(term, count), y = count)) + geom_col(fill = “#D4A843”) + coord_flip() + labs( title = paste(“Top words in”, SECTION_TO_EXPLORE, “ads”), x = NULL, y = “Total occurrences”, caption = “Source: APSA eJobs” ) + theme_civic()</p>
-</section>
-<section id="section-7" class="level1">
-<h1>============================================================================</h1>
-</section>
-<section id="analysis-2-keyness" class="level1">
-<h1>ANALYSIS 2 — KEYNESS</h1>
-</section>
-<section id="what-words-are-distinctively-more-common-in-one-group-vs-another" class="level1">
-<h1>What words are distinctively more common in one group vs another?</h1>
-</section>
-<section id="section-8" class="level1">
-<h1>============================================================================</h1>
-</section>
-<section id="a.-pre-covid-vs-post-covid" class="level1">
-<h1>── 2a. Pre-COVID vs Post-COVID ───────────────────────────────────────────────</h1>
-<p>#Remove rows where period is na job_dfm_dated &lt;- job_dfm %&gt;% dfm_subset(!is.na(docvars(job_dfm, “period”)))</p>
-<p>textstat_keyness( job_dfm_dated, target = docvars(job_dfm_dated, “period”) == “post_covid” ) %&gt;% textplot_keyness( n = 20, color = c(“#2D6A5F”, “#D4A843”) ) + labs( title = “Words distinctive of post-COVID vs pre-COVID job ads”, subtitle = “Green = more common post-COVID | Gold = more common pre-COVID”, caption = “Source: APSA eJobs” ) + theme_civic()</p>
-</section>
-<section id="b.-one-section-vs-all-others" class="level1">
-<h1>── 2b. One section vs all others ────────────────────────────────────────────</h1>
-</section>
-<section id="change-section_to_explore-above-or-set-a-new-one-here" class="level1">
-<h1>Change SECTION_TO_EXPLORE above, or set a new one here</h1>
-<p>TARGET_SECTION &lt;- “NON-ACADEMIC” # ← CHANGE THIS</p>
-<p>textstat_keyness( job_dfm, target = docvars(job_dfm, “section”) == TARGET_SECTION ) %&gt;% textplot_keyness(n = 20, color = c(“#2D6A5F”, “#D4A843”)) + labs( title = paste(“Words distinctive of”, TARGET_SECTION, “ads”), subtitle = paste(TARGET_SECTION, “vs all other sections”), caption = “Source: APSA eJobs” ) + theme_civic()</p>
-</section>
-<section id="section-9" class="level1">
-<h1>============================================================================</h1>
-</section>
-<section id="analysis-3-trends-over-time" class="level1">
-<h1>ANALYSIS 3 — TRENDS OVER TIME</h1>
-</section>
-<section id="how-has-the-use-of-specific-terms-changed-across-years" class="level1">
-<h1>How has the use of specific terms changed across years?</h1>
-</section>
-<section id="section-10" class="level1">
-<h1>============================================================================</h1>
-</section>
-<section id="a.-track-terms-of-interest" class="level1">
-<h1>── 3a. Track terms of interest ──────────────────────────────────────────────</h1>
-</section>
-<section id="add-or-remove-terms-from-this-list" class="level1">
-<h1>Add or remove terms from this list</h1>
-<p>TERMS &lt;- c(“remote”, “online”, “diversity”, “equity”, “data”) # ← CHANGE THIS</p>
-<p>trend_data &lt;- job_dfm %&gt;% dfm_group(groups = year) %&gt;% dfm_select(pattern = TERMS) %&gt;% convert(to = “data.frame”) %&gt;% rename(year = doc_id) %&gt;% filter(!is.na(year)) %&gt;% pivot_longer(-year, names_to = “term”, values_to = “count”) %&gt;% mutate(year = as.integer(year))</p>
-<p>ggplot(trend_data, aes(x = year, y = count, color = term)) + geom_line(linewidth = 1) + geom_point(size = 2) + scale_color_manual(values = civic_cat) + labs( title = “Term frequency trends in political science job ads”, subtitle = paste(“Tracking:”, paste(TERMS, collapse = “,”)), x = “Year”, y = “Total occurrences”, color = NULL, caption = “Source: APSA eJobs” ) + theme_civic()</p>
-</section>
-<section id="b.-normalize-by-number-of-ads-per-year-relative-frequency" class="level1">
-<h1>── 3b. Normalize by number of ads per year (relative frequency) ─────────────</h1>
-</section>
-<section id="raw-counts-can-be-misleading-if-some-years-have-more-ads-than-others." class="level1">
-<h1>Raw counts can be misleading if some years have more ads than others.</h1>
-</section>
-<section id="this-shows-occurrences-per-1000-ads-instead." class="level1">
-<h1>This shows occurrences per 1,000 ads instead.</h1>
-<p>ads_per_year &lt;- ads %&gt;% filter(!is.na(year)) %&gt;% count(year, name = “n_ads”)</p>
-<p>trend_data_norm &lt;- trend_data %&gt;% left_join(ads_per_year, by = “year”) %&gt;% mutate(per_1000 = (count / n_ads) * 1000)</p>
-<p>ggplot(trend_data_norm, aes(x = year, y = per_1000, color = term)) + geom_line(linewidth = 1) + geom_point(size = 2) + scale_color_manual(values = civic_cat) + labs( title = “Term frequency trends (normalized)”, subtitle = paste(“Occurrences per 1,000 ads — tracking:”, paste(TERMS, collapse = “,”)), x = “Year”, y = “Occurrences per 1,000 ads”, color = NULL, caption = “Source: APSA eJobs” ) + theme_civic()</p>
-</section>
-<section id="section-11" class="level1">
-<h1>============================================================================</h1>
-</section>
-<section id="analysis-4-ad-volume-over-time" class="level1">
-<h1>ANALYSIS 4 — AD VOLUME OVER TIME</h1>
-</section>
-<section id="how-many-job-listings-were-posted-each-year" class="level1">
-<h1>How many job listings were posted each year?</h1>
-</section>
-<section id="section-12" class="level1">
-<h1>============================================================================</h1>
-<p>ads_per_year_plot &lt;- ads %&gt;% filter(!is.na(year)) %&gt;% count(year, name = “n_ads”) %&gt;% mutate(year = as.integer(year))</p>
-<p>ggplot(ads_per_year_plot, aes(x = year, y = n_ads)) + geom_col(fill = “#2D6A5F”) + geom_vline(xintercept = 2020, linetype = “dashed”, color = “#0F3830”, linewidth = 0.8) + geom_label(aes(x = 2020, y = max(n_ads) * 0.92, label = “Peak COVID (2020)”), hjust = -0.08, family = “sourcesans”, size = 3, color = “#0F3830”, fill = “#F5F0E8”, label.size = 0.3) + geom_text( aes(label = n_ads), vjust = -0.5, family = “sourcesans”, size = 3.2, color = “#3A4A45” ) + scale_x_continuous(breaks = unique(ads_per_year_plot$year)) + labs( title = “Number of Political Science Job Ads Posted Per Year”, subtitle = “Total listings across all sections”, x = “Year”, y = “Number of ads”, caption = “Source: APSA eJobs” ) + theme_civic() + theme(axis.text.x = element_text(angle = 45, hjust = 1))</p>
-</section>
-<section id="section-13" class="level1">
-<h1>============================================================================</h1>
-</section>
-<section id="analysis-5-ad-volume-by-section-over-time" class="level1">
-<h1>ANALYSIS 5 — AD VOLUME BY SECTION OVER TIME</h1>
-</section>
-<section id="how-has-posting-volume-changed-within-each-job-type-across-years" class="level1">
-<h1>How has posting volume changed within each job type across years?</h1>
-</section>
-<section id="section-14" class="level1">
-<h1>============================================================================</h1>
-<p>section_year_counts &lt;- ads %&gt;% filter(!is.na(year), !is.na(section)) %&gt;% count(year, section, name = “n_ads”) %&gt;% mutate(year = as.integer(year))</p>
-</section>
-<section id="a.-faceted-line-chart-one-panel-per-section" class="level1">
-<h1>── 5a. Faceted line chart — one panel per section ───────────────────────────</h1>
-<p>ggplot(section_year_counts, aes(x = year, y = n_ads, color = section, group = section)) + geom_line(linewidth = 0.9) + geom_point(size = 1.8) + facet_wrap(~ section, scales = “free_y”, ncol = 3) + scale_color_manual(values = colorRampPalette(civic_cat)(n_distinct(section_year_counts<span class="math inline">\(section))) +
-  scale_x_continuous(breaks = unique(section_year_counts\)</span>year)) + labs( title = “Job ad Postings by Section Over Time”, subtitle = “Y-axis is free-scaled per section to highlight relative trends”, x = “Year”, y = “Number of ads”, caption = “Source: APSA eJobs” ) + theme_civic() + theme( legend.position = “none”, axis.text.x = element_text(angle = 45, hjust = 1), strip.text = element_text(size = 8) )</p>
-</section>
-<section id="b.-stacked-area-chart-overall-composition-shift-at-a-glance" class="level1">
-<h1>── 5b. Stacked area chart — overall composition shift at a glance ───────────</h1>
-<p>ggplot(section_year_counts, aes(x = year, y = n_ads, fill = section)) + geom_area(position = “stack”, alpha = 0.85, color = “#F5F0E8”, linewidth = 0.3) + scale_fill_manual(values = colorRampPalette(civic_cat)(n_distinct(section_year_counts<span class="math inline">\(section))) +
-  scale_x_continuous(breaks = unique(section_year_counts\)</span>year)) + labs( title = “Composition of Job Ad Postings by Section Over Time”, subtitle = “Stacked area — shows both total volume and share per section”, x = “Year”, y = “Number of ads”, fill = NULL, caption = “Source: APSA eJobs” ) + theme_civic() + theme( axis.text.x = element_text(angle = 45, hjust = 1), legend.position = “bottom”, legend.key.size = unit(0.6, “lines”) ) + guides(fill = guide_legend(nrow = 3))</p>
-</section>
-<section id="section-15" class="level1">
-<h1>============================================================================</h1>
-</section>
-<section id="analysis-6-emerging-vs-declining-keywords-by-section" class="level1">
-<h1>ANALYSIS 6 — EMERGING vs DECLINING KEYWORDS BY SECTION</h1>
-</section>
-<section id="compares-the-earliest-years-vs-most-recent-years-within-each-section" class="level1">
-<h1>Compares the earliest years vs most recent years within each section</h1>
-</section>
-<section id="to-surface-vocabulary-that-is-genuinely-entering-or-leaving-the-field." class="level1">
-<h1>to surface vocabulary that is genuinely entering or leaving the field.</h1>
-</section>
-<section id="section-16" class="level1">
-<h1>============================================================================</h1>
-</section>
-<section id="parameters" class="level1">
-<h1>── Parameters ───────────────────────────────────────────────────────────────</h1>
-</section>
-<section id="define-how-many-years-to-treat-as-early-and-late-windows." class="level1">
-<h1>Define how many years to treat as “early” and “late” windows.</h1>
-</section>
-<section id="e.g.-n_years-2-means-earliest-2-years-vs-latest-2-years-in-each-section." class="level1">
-<h1>E.g., N_YEARS = 2 means earliest 2 years vs latest 2 years in each section.</h1>
-<p>N_YEARS &lt;- 2 # ← CHANGE THIS to widen/narrow the comparison window N_TERMS &lt;- 10 # ← top N emerging + top N declining per section</p>
-</section>
-<section id="helper-run-keyness-for-one-section" class="level1">
-<h1>── Helper: run keyness for one section ──────────────────────────────────────</h1>
-<p>get_section_keyness &lt;- function(section_name, dfm_obj, n_years, n_terms) {</p>
-<p>sub_dfm &lt;- dfm_obj %&gt;% dfm_subset(section == section_name &amp; !is.na(year))</p>
-<p>if (ndoc(sub_dfm) &lt; 10) return(NULL) # skip tiny sections</p>
-<p>years_present &lt;- sort(unique(as.integer(docvars(sub_dfm, “year”))))</p>
-<p>if (length(years_present) &lt; (n_years * 2)) return(NULL) # not enough years</p>
-<p>early_years &lt;- head(years_present, n_years) late_years &lt;- tail(years_present, n_years)</p>
-<p>sub_dfm_filtered &lt;- sub_dfm %&gt;% dfm_subset(as.integer(year) %in% c(early_years, late_years))</p>
-<p>if (ndoc(sub_dfm_filtered) &lt; 4) return(NULL)</p>
-<p>is_late &lt;- as.integer(docvars(sub_dfm_filtered, “year”)) %in% late_years</p>
-<p>ks &lt;- tryCatch( textstat_keyness(sub_dfm_filtered, target = is_late, measure = “chi2”), error = function(e) NULL )</p>
-<p>if (is.null(ks) || nrow(ks) &lt; 2) return(NULL)</p>
-<p>emerging &lt;- ks %&gt;% filter(chi2 &gt; 0) %&gt;% slice_max(chi2, n = n_terms) declining &lt;- ks %&gt;% filter(chi2 &lt; 0) %&gt;% slice_min(chi2, n = n_terms)</p>
-<p>bind_rows( emerging %&gt;% mutate(direction = “Emerging”), declining %&gt;% mutate(direction = “Declining”) ) %&gt;% mutate( section = section_name, early_window = paste(early_years, collapse = “–”), late_window = paste(late_years, collapse = “–”) ) }</p>
-</section>
-<section id="run-across-all-sections" class="level1">
-<h1>── Run across all sections ───────────────────────────────────────────────────</h1>
-<p>all_sections &lt;- unique(na.omit(docvars(job_dfm, “section”)))</p>
-<p>keyness_all &lt;- map_dfr(all_sections, ~ get_section_keyness( section_name = .x, dfm_obj = job_dfm, n_years = N_YEARS, n_terms = N_TERMS ))</p>
-</section>
-<section id="a.-faceted-diverging-bar-chart" class="level1">
-<h1>── 6a. Faceted diverging bar chart ──────────────────────────────────────────</h1>
-</section>
-<section id="one-panel-per-section.-bars-point-right-emerging-or-left-declining." class="level1">
-<h1>One panel per section. Bars point right (emerging) or left (declining).</h1>
-<p>keyness_plot_data &lt;- keyness_all %&gt;% filter(!section %in% c(“OPEN”, “NON-ACADEMIC”)) %&gt;% mutate( chi2_signed = if_else(direction == “Declining”, -abs(chi2), abs(chi2)), direction = factor(direction, levels = c(“Emerging”, “Declining”)) ) %&gt;% group_by(section, direction) %&gt;% slice_max(abs(chi2_signed), n = 4) %&gt;% ungroup() %&gt;% mutate(term = reorder_within(feature, chi2_signed, section))</p>
-<p>ggplot(keyness_plot_data, aes(x = chi2_signed, y = term, fill = direction)) + geom_col(width = 0.75) + geom_vline(xintercept = 0, color = “#C8BFA8”, linewidth = 0.5) + scale_y_reordered() + scale_fill_manual( values = c(“Emerging” = “#2D6A5F”, “Declining” = “#D4A843”), name = NULL ) + facet_wrap(~ section, scales = “free_y”, ncol = 2) + labs( title = “Emerging and Declining Keywords by Section”, subtitle = paste0( “Earliest”, N_YEARS, ” vs latest “, N_YEARS,” years within each section | χ² keyness, target = recent” ), x = “← Declining | Emerging →”, y = NULL, caption = “Source: APSA eJobs” ) + theme_civic(base_size = 10) + theme( legend.position = “top”, legend.key.size = unit(0.6, “lines”), strip.text = element_text(size = 8, face = “bold”), axis.text.y = element_text(size = 7), axis.text.x = element_text(size = 7), panel.spacing = unit(1.2, “lines”) )</p>
-</section>
-<section id="b.-salary-pay-mentions-by-section" class="level1">
-<h1>── 6b. Salary / pay mentions by section ─────────────────────────────────────</h1>
-<p>SALARY_TERMS &lt;- c(“salary”, “pay”, “compensation”, “stipend”, “wage”)</p>
-<p>salary_by_section &lt;- job_dfm %&gt;% dfm_select(pattern = SALARY_TERMS) %&gt;% convert(to = “data.frame”) %&gt;% bind_cols(section = docvars(job_dfm, “section”)) %&gt;% filter(!is.na(section), !section %in% c(“OPEN”, “NON-ACADEMIC”)) %&gt;% pivot_longer(-c(doc_id, section), names_to = “term”, values_to = “count”) %&gt;% group_by(section, term) %&gt;% summarise(total = sum(count), .groups = “drop”) %&gt;% group_by(section) %&gt;% mutate(section_total = sum(total)) %&gt;% ungroup()</p>
-<p>salary_by_section &lt;- salary_by_section %&gt;% left_join(ads %&gt;% count(section, name = “n_ads”), by = “section”) %&gt;% mutate(total = (total / n_ads) * 1000)</p>
-<p>ggplot(salary_by_section, aes(x = reorder(section, section_total), y = total, fill = term)) + geom_col(width = 0.7) + coord_flip() + scale_fill_manual(values = civic_cat, name = “Term”) + labs( title = “Salary and Pay-Related Term Mentions by Section”, subtitle = “Raw counts across all ads per section”, x = NULL, y = “Total mentions”, caption = “Source: APSA eJobs” ) + theme_civic() + theme( legend.position = “top”, legend.key.size = unit(0.6, “lines”) )</p>
-<p>salary_by_section_period &lt;- job_dfm %&gt;% dfm_select(pattern = SALARY_TERMS) %&gt;% convert(to = “data.frame”) %&gt;% bind_cols( section = docvars(job_dfm, “section”), period = docvars(job_dfm, “period”) ) %&gt;% filter( !is.na(section), !is.na(period), !section %in% c(“OPEN”, “NON-ACADEMIC”) ) %&gt;% pivot_longer(-c(doc_id, section, period), names_to = “term”, values_to = “count”) %&gt;% group_by(section, period, term) %&gt;% summarise(total = sum(count), .groups = “drop”) %&gt;% mutate(period = factor(period, levels = c(“pre_covid”, “post_covid”), labels = c(“Pre-COVID”, “Post-COVID”)))</p>
-<p>ggplot(salary_by_section_period, aes(x = period, y = total, fill = term)) + geom_col(width = 0.65, position = “stack”) + facet_wrap(~ section, scales = “free_y”, ncol = 3) + scale_fill_manual(values = civic_cat, name = “Term”) + labs( title = “Salary and Pay-Related Mentions: Pre- vs Post-COVID”, subtitle = “Raw counts per section split by period”, x = NULL, y = “Total mentions”, caption = “Source: APSA eJobs” ) + theme_civic(base_size = 10) + theme( legend.position = “top”, legend.key.size = unit(0.6, “lines”), strip.text = element_text(size = 8, face = “bold”), panel.spacing = unit(1.2, “lines”) )</p>
-</section>
-<section id="c.-chi-squared-test-for-remote-pre--vs-post-covid" class="level1">
-<h1>── 6c. Chi-squared test for “remote” pre- vs post-COVID──────────────────────</h1>
-<p>remote_counts &lt;- job_dfm %&gt;% dfm_subset(!is.na(docvars(job_dfm, “period”))) %&gt;% dfm_select(pattern = “remote”) %&gt;% convert(to = “data.frame”) %&gt;% bind_cols(period = docvars( job_dfm %&gt;% dfm_subset(!is.na(docvars(job_dfm, “period”))), “period” )) %&gt;% group_by(period) %&gt;% summarise( remote_mentions = sum(remote), total_words = n(), .groups = “drop” ) %&gt;% mutate(not_remote = total_words - remote_mentions)</p>
-</section>
-<section id="build-the-contingency-table" class="level1">
-<h1>Build the contingency table</h1>
-<p>contingency_table &lt;- remote_counts %&gt;% select(period, remote_mentions, not_remote) %&gt;% column_to_rownames(“period”) %&gt;% as.matrix()</p>
-</section>
-<section id="run-the-chi-squared-test" class="level1">
-<h1>Run the chi-squared test</h1>
-<p>chi_result &lt;- chisq.test(contingency_table)</p>
-</section>
-<section id="print-readable-results" class="level1">
-<h1>Print readable results</h1>
-<p>cat(“=== Chi-squared test: ‘remote’ pre- vs post-COVID ===”) cat(“Observed counts:”) print(contingency_table) cat(“counts (if no difference):”) print(round(chi_result<span class="math inline">\(expected, 1))
-cat("\nChi-squared statistic:", round(chi_result\)</span>statistic, 3), “”) cat(“Degrees of freedom:”, chi_result<span class="math inline">\(parameter, "\n")
-cat("P-value:             ", format.pval(chi_result\)</span>p.value, digits = 4), “”) cat(“: The difference is”, if_else(chi_result$p.value &lt; 0.05, “STATISTICALLY SIGNIFICANT (p &lt; 0.05)”, “not statistically significant (p &gt;= 0.05)”), “”)</p>
-</section>
-<section id="visualization-remote-pre--vs-post-covid" class="level1">
-<h1>── Visualization: “remote” pre- vs post-COVID ────────────────────────────────</h1>
-<p>remote_plot_data &lt;- remote_counts %&gt;% mutate( period = factor(period, levels = c(“pre_covid”, “post_covid”), labels = c(“Pre-COVID”, “Post-COVID”)), expected = chi_result$expected[, “remote_mentions”] ) %&gt;% pivot_longer( cols = c(remote_mentions, expected), names_to = “type”, values_to = “count” ) %&gt;% mutate(type = factor(type, levels = c(“remote_mentions”, “expected”), labels = c(“Observed”, “Expected (if no difference)”)))</p>
-</section>
-<section id="c.-observed-vs-expected-grouped-bar" class="level1">
-<h1>── 6c. Observed vs Expected grouped bar ─────────────────────────────────────</h1>
-<p>ggplot(remote_plot_data, aes(x = period, y = count, fill = type)) + geom_col(position = position_dodge(width = 0.6), width = 0.5, alpha = 0.9) + geom_text( aes(label = round(count, 1)), position = position_dodge(width = 0.6), vjust = -0.5, family = “sourcesans”, size = 3.2, color = “#3A4A45” ) + annotate( “text”, x = 1.5, y = max(remote_plot_data<span class="math inline">\(count) * 1.12,
-    label  = paste0("χ² = ", round(chi_result\)</span>statistic, 2), ” | p “, ifelse(chi_result<span class="math inline">\(p.value &lt; 0.001, "&lt; 0.001",
-                                      paste0("= ", round(chi_result\)</span>p.value, 3)))), family =”sourcesans”, size = 3.2, color = “#0F3830” ) + scale_fill_manual( values = c(“Observed” = “#2D6A5F”, “Expected (if no difference)” = “#D4A843”), name = NULL ) + scale_y_continuous(expand = expansion(mult = c(0, 0.18))) + labs( title = “Observed vs Expected Mentions of ‘remote’”, subtitle = “If COVID had no effect, observed and expected bars would be equal”, x = NULL, y = “Number of mentions”, caption = “Source: APSA eJobs” ) + theme_civic() + theme( legend.position = “top”, legend.key.size = unit(0.6, “lines”) )</p>
-</section>
-<section id="section-17" class="level1">
-<h1>============================================================================</h1>
-</section>
-<section id="analysis-7-map-of-highest-paying-job-listings-by-state" class="level1">
-<h1>ANALYSIS 7 — MAP OF HIGHEST PAYING JOB LISTINGS BY STATE</h1>
-</section>
-<section id="extracts-salary-figures-from-ad-text-aggregates-by-state-plots-choropleth" class="level1">
-<h1>Extracts salary figures from ad text, aggregates by state, plots choropleth</h1>
-</section>
-<section id="section-18" class="level1">
-<h1>============================================================================</h1>
-</section>
-<section id="step-1-extract-salary-figures-from-raw-ad-text" class="level1">
-<h1>── Step 1: Extract salary figures from raw ad text ──────────────────────────</h1>
-</section>
-<section id="catches-formats-like-80000-80k-120000-140000-80000-usd" class="level1">
-<h1>Catches formats like $80,000 | $80k | $120,000-$140,000 | 80,000 USD</h1>
-<p>salary_extracted &lt;- ads %&gt;% mutate( # Extract all salary-like numbers from the text salary_raw = str_extract_all( ad_text, “\<span class="math inline">\([0-9]{2,3}(?:,[0-9]{3})*(?:\\.[0-9]+)?[kK]?|\\b[0-9]{2,3},[0-9]{3}\\b"
-    )
-  ) %&gt;%
-  unnest(salary_raw) %&gt;%
-  mutate(
-    # Standardise to numeric
-    salary_clean = salary_raw %&gt;%
-      str_remove_all("\\\)</span>|,|USD”) %&gt;% str_trim() %&gt;% # Convert 80k → 80000 { ifelse(str_detect(., “[kK]<span class="math inline">\("),
-               as.numeric(str_remove(., "[kK]\)</span>”)) * 1000, as.numeric(.)) } ) %&gt;% # Plausible academic salary range: $30k–$300k filter(salary_clean &gt;= 30000, salary_clean &lt;= 300000)</p>
-</section>
-<section id="step-2-aggregate-median-salary-by-state" class="level1">
-<h1>── Step 2: Aggregate median salary by state ─────────────────────────────────</h1>
-<p>salary_by_state &lt;- salary_extracted %&gt;% filter(!is.na(state), state != ““) %&gt;% group_by(state) %&gt;% summarise( median_salary = median(salary_clean, na.rm = TRUE), mean_salary = mean(salary_clean, na.rm = TRUE), n_ads = n_distinct(doc_id), .groups =”drop” ) %&gt;% # usmap expects full state names or two-letter abbreviations # if your state column is full names, use as-is # if abbreviations, rename to match usmap expectations rename(state_col = state)</p>
-</section>
-<section id="step-3-check-what-your-state-column-looks-like" class="level1">
-<h1>── Step 3: Check what your state column looks like ──────────────────────────</h1>
-</section>
-<section id="run-this-to-confirm-format-before-plotting" class="level1">
-<h1>Run this to confirm format before plotting</h1>
-<p>cat(“Sample state values:”) print(head(unique(salary_by_state$state_col), 20))</p>
-</section>
-<section id="step-4-merge-with-usmap-state-data" class="level1">
-<h1>── Step 4: Merge with usmap state data ──────────────────────────────────────</h1>
-</section>
-<section id="if-your-state-column-contains-full-names-e.g.-pennsylvania" class="level1">
-<h1>If your state column contains full names (e.g.&nbsp;“Pennsylvania”):</h1>
-<p>state_map_data &lt;- salary_by_state %&gt;% rename(state = state_col)</p>
-</section>
-<section id="if-your-state-column-contains-abbreviations-e.g.-pa-use-this-instead" class="level1">
-<h1>If your state column contains abbreviations (e.g.&nbsp;“PA”), use this instead:</h1>
-</section>
-<section id="state_map_data---salary_by_state" class="level1">
-<h1>state_map_data &lt;- salary_by_state %&gt;%</h1>
-</section>
-<section id="left_joinusmapus_mapstates-selectabbr-full-distinct" class="level1">
-<h1>left_join(usmap::us_map(“states”) %&gt;% select(abbr, full) %&gt;% distinct(),</h1>
-</section>
-<section id="by-cstate_col-abbr" class="level1">
-<h1>by = c(“state_col” = “abbr”)) %&gt;%</h1>
-</section>
-<section id="renamestate-full" class="level1">
-<h1>rename(state = full)</h1>
-</section>
-<section id="step-5-choropleth-map" class="level1">
-<h1>── Step 5: Choropleth map ───────────────────────────────────────────────────</h1>
-<p>plot_usmap( data = state_map_data, values = “median_salary”, color = “#F5F0E8”, linewidth = 0.3 ) + scale_fill_gradientn( colors = c(“#C8BFA8”, “#6BAF9E”, “#2D6A5F”, “#0F3830”), na.value = “#EDE8DC”, name = “Median salary (USD)”, labels = scales::dollar_format(scale = 1e-3, suffix = “k”) ) + labs( title = “Median advertised salary in political science job ads by state”, subtitle = paste0(“Based on”, nrow(salary_extracted), ” salary figures extracted from ad text”), caption = “Source: APSA eJobs | Excludes ads with no extractable salary figure” ) + theme( plot.background = element_rect(fill = “#F5F0E8”, color = NA), plot.title = element_text(family = “playfair”, size = 14, color = “#1C2B2B”, face = “bold”, margin = margin(b = 6)), plot.subtitle = element_text(family = “sourcesans”, size = 10, color = “#3A4A45”, margin = margin(b = 8)), plot.caption = element_text(family = “sourcesans”, size = 8, color = “#7A8C85”, hjust = 0), legend.background = element_rect(fill = “#F5F0E8”, color = NA), legend.text = element_text(family = “sourcesans”, size = 8, color = “#3A4A45”), legend.title = element_text(family = “sourcesans”, size = 8, color = “#3A4A45”), legend.position = “right”, plot.margin = margin(16, 16, 16, 16) )</p>
-</section>
-<section id="step-6-bar-chart-companion-top-15-states-by-median-salary" class="level1">
-<h1>── Step 6: Bar chart companion — top 15 states by median salary ─────────────</h1>
-</section>
-<section id="useful-since-the-map-can-obscure-small-states-like-ct-ri-dc" class="level1">
-<h1>Useful since the map can obscure small states like CT, RI, DC</h1>
-<p>top_salary_states &lt;- state_map_data %&gt;% filter(!is.na(median_salary), n_ads &gt;= 5) %&gt;% # min 5 ads for reliability slice_max(median_salary, n = 15)</p>
-<p>ggplot(top_salary_states, aes(x = reorder(state, median_salary), y = median_salary)) + geom_col(fill = “#2D6A5F”, width = 0.7) + geom_text( aes(label = scales::dollar(median_salary, scale = 1e-3, suffix = “k”, accuracy = 1)), hjust = -0.1, family = “sourcesans”, size = 3, color = “#3A4A45” ) + geom_text( aes(label = paste0(“n=”, n_ads), y = 31000), hjust = 0, family = “sourcesans”, size = 2.6, color = “#7A8C85” ) + coord_flip() + scale_y_continuous( labels = scales::dollar_format(scale = 1e-3, suffix = “k”), expand = expansion(mult = c(0.05, 0.15)) ) + labs( title = “Top 15 states by median advertised salary”, subtitle = “Minimum 5 ads per state | n = number of salary figures extracted”, x = NULL, y = “Median advertised salary”, caption = “Source: APSA eJobs” ) + theme_civic()</p>
-
-
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

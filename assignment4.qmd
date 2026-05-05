@@ -3,5 +3,4 @@ format: pdf
 header-includes:
   - \usepackage{pdfpages}
 ---
-
-\includepdf[]{Stern_Group_Hackathon.pdf}
+\includepdf[pages=-]{Stern_Group_Hackathon.pdf}

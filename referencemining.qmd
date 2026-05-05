@@ -1,7 +1,9 @@
 ---
 title: "Reference Mining"
 ---
+
 # Deep Reference Mining From Scholarly Literature in the Arts and Humanities
+
 A brief introduction to how NLP can improve the world of science and education...
 
 ```{r}
@@ -14,5 +16,3 @@ knitr::include_graphics("Slide4_RMP.jpg")
 knitr::include_graphics("Slide5_RMP.jpg")
 knitr::include_graphics("Slide6_RMP.jpg")
 ```
-
-
