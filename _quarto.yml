@@ -13,24 +13,16 @@ website:
       href: research.html
     - text: "CV"
       href: cv.pdf
-    - text: "Lab 1"
+    - text: "Assignment 1"
       href: assignment1.html      
-    - text: "Lab 2"
-      href: continuedAssignment1.html
-    - text: "Reference Minging"
-      href: continuedAssignment1.html
-    - text: "Weekly Reflections"
-      href: weeklyreflections.html    
-    - text: "Insight on Data and ML"
+    - text: "Assignment 2"
       href: assignment2.html
-    - text: "Election Data Discrepancies"
+    - text: "Assignment 3"
       href: assignment3.html
-    - text: "Tech Study"
+    - text: "Assignment 4"
+      href: assignment4.pdf    
       href: techstudy.html
     - text: "Web Scraping"
-      href: webscraping.html
-    - text: "Scraping Government Data"
-      href: govscraping.html
     - text: "Using Quanteda"
       href: usingquanteda.html      
 

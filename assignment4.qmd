@@ -1,0 +1,7 @@
+---
+format: pdf
+header-includes:
+  - \usepackage{pdfpages}
+---
+
+\includepdf[]{Stern_Group_Hackathon.pdf}
